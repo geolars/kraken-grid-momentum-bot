@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ &amp; Bedienungsanleitung – Kraken Grid &amp; Momentum Bot</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #111827;
+      --border: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --cyan: #38bdf8;
+      --purple: #a855f7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top right, #1e1b4b, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 22px 0; border-bottom: 1px solid var(--border);
+    }
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 18px; text-decoration: none; color: var(--text); }
+    .diamond {
+      width: 26px; height: 26px; border-radius: 7px;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      transform: rotate(45deg);
+    }
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .btn-sm {
+      background: var(--card); color: var(--text); border: 1px solid var(--border);
+      padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; text-decoration: none; font-size: 14px;
+    }
+    h1 { font-size: clamp(26px, 4vw, 38px); margin: 36px 0 12px; color: var(--cyan); }
+    .intro { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .section-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 26px; margin-bottom: 24px;
+    }
+    .section-card h2 { font-size: 20px; color: var(--cyan); margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+    .item { margin-bottom: 16px; }
+    .item:last-child { margin-bottom: 0; }
+    .item h3 { font-size: 16px; color: #f8fafc; margin-bottom: 4px; }
+    .item p, .item ul { color: var(--muted); font-size: 14.5px; }
+    .item ul { padding-left: 20px; margin-top: 6px; }
+    .item li { margin-bottom: 6px; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 12px; font-weight: 700; color: #fff; }
+    .b-green { background: #16a34a; }
+    .b-orange { background: #d97706; }
+    .b-purple { background: #9333ea; }
+    .b-blue { background: #0284c7; }
+    .b-red { background: #dc2626; }
+    footer {
+      border-top: 1px solid var(--border); padding: 28px 0 44px;
+      font-size: 13px; color: var(--muted); margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="logo" href="index.html">
+        <div class="diamond"></div>
+        <span>KryptoBot Pro</span>
+      </a>
+      <div class="nav-actions">
+        <a class="btn-sm" href="index.html" data-de="← Zurück zur Startseite" data-en="← Back to Home">← Zurück zur Startseite</a>
+        <button class="btn-sm" onclick="toggleLang()">🌐 DE / EN</button>
+      </div>
+    </header>
+
+    <h1 data-de="📖 FAQ &amp; Bedienungsanleitung" data-en="📖 FAQ &amp; User Guide">📖 FAQ &amp; Bedienungsanleitung</h1>
+    <p class="intro" data-de="Alle Schaltflächen, Symbole, Statusmeldungen und Handelsregeln verständlich erklärt." data-en="All buttons, icons, status messages, and trading rules clearly explained.">Alle Schaltflächen, Symbole, Statusmeldungen und Handelsregeln verständlich erklärt.</p>
+
+    <section class="section-card">
+      <h2 data-de="1. Sicherheit, API-Schlüssel &amp; Versionen" data-en="1. Security, API Keys &amp; Editions">1. Sicherheit, API-Schlüssel &amp; Versionen</h2>
+      <div class="item">
+        <h3 data-de="Wie sicher ist mein Geld?" data-en="How safe are my funds?">Wie sicher ist mein Geld?</h3>
+        <p data-de="Der Bot läuft zu 100 % lokal auf Ihrem Windows-PC. Ihre API-Keys verlassen niemals Ihren Rechner. Bei Kraken aktivieren Sie nur Lese- und Handelsrechte – Auszahlungen („Withdraw Funds“) bleiben deaktiviert." data-en="The bot runs 100% locally on your Windows PC. Your API keys never leave your computer. On Kraken, you only enable read and trade permissions – 'Withdraw Funds' remains disabled.">Der Bot läuft zu 100 % lokal auf Ihrem Windows-PC. Ihre API-Keys verlassen niemals Ihren Rechner. Bei Kraken aktivieren Sie nur Lese- und Handelsrechte – Auszahlungen („Withdraw Funds“) bleiben deaktiviert.</p>
+      </div>
+      <div class="item">
+        <h3 data-de="Unterschied zwischen Demo, Lite und Pro" data-en="Difference between Demo, Lite, and Pro">Unterschied zwischen Demo, Lite und Pro</h3>
+        <ul>
+          <li data-de="<strong>Lite (Demo-Modus):</strong> Kostenloser Test mit Spielgeld – inklusive aller 8 Start-Coins, bis zu 6 Paketen und ⚡ Momentum-Modul (15 % Reserve)." data-en="<strong>Lite (Demo Mode):</strong> Free testing with virtual balance – includes all 8 starter coins, up to 6 packages, and ⚡ Momentum module (15% reserve)."><strong>Lite (Demo-Modus):</strong> Kostenloser Test mit Spielgeld – inklusive aller 8 Start-Coins, bis zu 6 Paketen und ⚡ Momentum-Modul (15 % Reserve).</li>
+          <li data-de="<strong>Lite (Echt-Modus):</strong> Kostenloser Live-Handel für BTC/EUR &amp; ETH/EUR, maximal 2 parallele Pakete, ohne Momentum." data-en="<strong>Lite (Live Mode):</strong> Free live trading for BTC/EUR &amp; ETH/EUR, max. 2 parallel packages, without Momentum."><strong>Lite (Echt-Modus):</strong> Kostenloser Live-Handel für BTC/EUR &amp; ETH/EUR, maximal 2 parallele Pakete, ohne Momentum.</li>
+          <li data-de="<strong>Pro-Version (59,00 € einmalig):</strong> Bis zu 25 parallele Pakete, alle Kraken-Handelspaare, ⚡ Momentum-Lift, 🎯 Profit-Lock Trailing-Stop, 🏛️ § 23 EStG-Steuertresor &amp; Sounds." data-en="<strong>Pro Edition (€59.00 one-time):</strong> Up to 25 parallel packages, all Kraken pairs, ⚡ Momentum-Lift, 🎯 Profit-Lock Trailing Stop, 🏛️ Automated Tax Vault &amp; Sounds."><strong>Pro-Version (59,00 € einmalig):</strong> Bis zu 25 parallele Pakete, alle Kraken-Handelspaare, ⚡ Momentum-Lift, 🎯 Profit-Lock Trailing-Stop, 🏛️ § 23 EStG-Steuertresor &amp; Sounds.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2 data-de="2. Obere Schaltflächen (Topbar)" data-en="2. Top Navigation Buttons">2. Obere Schaltflächen (Topbar)</h2>
+      <div class="item">
+        <ul>
+          <li data-de="<strong>💎 Upgrade auf Pro:</strong> Öffnet den Checkout-Link und das Eingabefeld für Ihre Stripe-Belegnummer oder Kauf-E-Mail zur Sofort-Freischaltung." data-en="<strong>💎 Upgrade to Pro:</strong> Opens the checkout link and activation input for your Stripe receipt number or purchase email."><strong>💎 Upgrade auf Pro:</strong> Öffnet den Checkout-Link und das Eingabefeld für Ihre Stripe-Belegnummer oder Kauf-E-Mail zur Sofort-Freischaltung.</li>
+          <li data-de="<strong>🔗 Kraken verbinden:</strong> Startet den 3-Schritte-Assistenten für Ihre Kraken-API-Schlüssel." data-en="<strong>🔗 Connect Kraken:</strong> Opens the 3-step setup wizard for your Kraken API keys."><strong>🔗 Kraken verbinden:</strong> Startet den 3-Schritte-Assistenten für Ihre Kraken-API-Schlüssel.</li>
+          <li data-de="<strong>🔊 Sound AN / AUS (Pro):</strong> Spielt bei Gewinnverkäufen einen Erfolgston ab." data-en="<strong>🔊 Sound ON / OFF (Pro):</strong> Plays an audio alert on profitable sales."><strong>🔊 Sound AN / AUS (Pro):</strong> Spielt bei Gewinnverkäufen einen Erfolgston ab.</li>
+          <li data-de="<strong>🛠️ Entwickleroptionen:</strong> Profi-Einstellungen für Trailing-Abstand, Momentum-Schwelle, Steuersatz und den gesamten Kraken-Marktkatalog." data-en="<strong>🛠️ Developer Options:</strong> Pro fine-tuning for trailing distance, momentum threshold, tax rate, and the full Kraken market catalog."><strong>🛠️ Entwickleroptionen:</strong> Profi-Einstellungen für Trailing-Abstand, Momentum-Schwelle, Steuersatz und den gesamten Kraken-Marktkatalog.</li>
+          <li data-de="<strong>🔄 Demo Reset:</strong> Setzt das Demokonto auf ein frei wählbares Startguthaben (€) zurück." data-en="<strong>🔄 Demo Reset:</strong> Resets the demo account to a custom starting balance (€)."><strong>🔄 Demo Reset:</strong> Setzt das Demokonto auf ein frei wählbares Startguthaben (€) zurück.</li>
+          <li data-de="<strong>🟡 DEMO-MODUS / 🔴 ECHT-MODUS:</strong> Hauptschalter zwischen risikofreier Simulation und echtem Kraken-Handel." data-en="<strong>🟡 DEMO MODE / 🔴 LIVE MODE:</strong> Main switch between risk-free simulation and real Kraken trading."><strong>🟡 DEMO-MODUS / 🔴 ECHT-MODUS:</strong> Hauptschalter zwischen risikofreier Simulation und echtem Kraken-Handel.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="section-card">
+      <h2 data-de="3. Statusmeldungen &amp; Symbole: Was macht der Bot warum?" data-en="3. Status Messages &amp; Icons: What is the Bot Doing &amp; Why?">3. Statusmeldungen &amp; Symbole: Was macht der Bot warum?</h2>
+      <div class="item">
+        <h3 data-de="Scanner-Status (oben rechts neben dem Scanner-Titel)" data-en="Scanner Status (top right of scanner table)">Scanner-Status (oben rechts neben dem Scanner-Titel)</h3>
+        <ul>
+          <li data-de="<strong>SCAN:</strong> Der Bot analysiert aktuell alle ausgewählten Handelspaare." data-en="<strong>SCAN:</strong> The bot is actively analyzing all selected trading pairs."><strong>SCAN:</strong> Der Bot analysiert aktuell alle ausgewählten Handelspaare.</li>
+          <li data-de="<strong>WAIT (0/6) oder WAIT (2/2):</strong> Alle Paket-Plätze sind voll, das freie Guthaben liegt unter der Mindest-Order oder der Bot wartet auf einen günstigen Rücksetzer (Dip)." data-en="<strong>WAIT (0/6) or WAIT (2/2):</strong> All package slots are full, free funds are below min. order, or the bot is waiting for a favorable dip."><strong>WAIT (0/6) oder WAIT (2/2):</strong> Alle Paket-Plätze sind voll, das freie Guthaben liegt unter der Mindest-Order oder der Bot wartet auf einen günstigen Rücksetzer (Dip).</li>
+          <li data-de="<strong>SELL ONLY:</strong> Kauf-Stopp ist aktiv – es werden nur noch bestehende Pakete verkauft." data-en="<strong>SELL ONLY:</strong> Buying is paused – only existing packages are managed and sold."><strong>SELL ONLY:</strong> Kauf-Stopp ist aktiv – es werden nur noch bestehende Pakete verkauft.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3 data-de="Badges in der Markt-Scanner-Tabelle" data-en="Badges in the Market Scanner Table">Badges in der Markt-Scanner-Tabelle</h3>
+        <ul>
+          <li data-de="<span class='badge b-green'>GRID OK</span> Trend und Spread passen. Der Bot kauft automatisch, sobald der Kurs mindestens <strong>0,25 % unter sein 1-Stunden-Hoch</strong> zurücksetzt (Dip-Schutz)." data-en="<span class='badge b-green'>GRID OK</span> Trend and spread are healthy. The bot buys automatically once price dips at least <strong>0.25% below its 1h high</strong>."><span class='badge b-green'>GRID OK</span> Trend und Spread passen. Der Bot kauft automatisch, sobald der Kurs mindestens <strong>0,25 % unter sein 1-Stunden-Hoch</strong> zurücksetzt (Dip-Schutz).</li>
+          <li data-de="<span class='badge b-orange'>WAIT</span> Marktbedingungen für diesen Coin sind aktuell ungünstig (Abwärtstrend, hoher Spread oder zu wenig Bewegung). Der Bot schützt Ihr Kapital." data-en="<span class='badge b-orange'>WAIT</span> Market conditions are currently unfavorable (downtrend, high spread, or low volatility). Your capital is protected."><span class='badge b-orange'>WAIT</span> Marktbedingungen für diesen Coin sind aktuell ungünstig (Abwärtstrend, hoher Spread oder zu wenig Bewegung). Der Bot schützt Ihr Kapital.</li>
+          <li data-de="<span class='badge b-purple'>⚡ LIFT</span> Ausbruchs-Signal! Starker 15-Minuten-Anstieg mit mindestens 1,8-fachem Handelsvolumen. Im Pro- und Demo-Modus kauft das Momentum-Modul sofort ein." data-en="<span class='badge b-purple'>⚡ LIFT</span> Breakout signal! Strong 15-minute surge with at least 1.8x volume. In Pro and Demo mode, the Momentum module enters immediately."><span class='badge b-purple'>⚡ LIFT</span> Ausbruchs-Signal! Starker 15-Minuten-Anstieg mit mindestens 1,8-fachem Handelsvolumen. Im Pro- und Demo-Modus kauft das Momentum-Modul sofort ein.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3 data-de="Symbole bei gehaltenen Paketen" data-en="Icons in Held Packages">Symbole bei gehaltenen Paketen</h3>
+        <ul>
+          <li data-de="<span class='badge b-blue'>GRID</span> / <span class='badge b-purple'>⚡ MOMENTUM</span> Zeigt an, welche Strategie das Paket eröffnet hat." data-en="<span class='badge b-blue'>GRID</span> / <span class='badge b-purple'>⚡ MOMENTUM</span> Shows which engine opened the package."><span class='badge b-blue'>GRID</span> / <span class='badge b-purple'>⚡ MOMENTUM</span> Zeigt an, welche Strategie das Paket eröffnet hat.</li>
+          <li data-de="<strong>▲ / ▬ / ▼ (Tendenz):</strong> Zeigt die kurzfristige Kursrichtung der letzten Sekunden." data-en="<strong>▲ / ▬ / ▼ (Trend):</strong> Shows the short-term price direction over the last few seconds."><strong>▲ / ▬ / ▼ (Tendenz):</strong> Zeigt die kurzfristige Kursrichtung der letzten Sekunden.</li>
+          <li data-de="<span class='badge b-red'>🛑 Shut Down</span> Sofortiger Markt-Notverkauf dieses Pakets zum aktuellen Kurs." data-en="<span class='badge b-red'>🛑 Shut Down</span> Immediate market sell of this package at current price."><span class='badge b-red'>🛑 Shut Down</span> Sofortiger Markt-Notverkauf dieses Pakets zum aktuellen Kurs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2 data-de="4. Häufige Fragen zum Live-Betrieb" data-en="4. Common Live Trading Questions">4. Häufige Fragen zum Live-Betrieb</h2>
+      <div class="item">
+        <h3 data-de="Warum steht mein Freies Guthaben nach einem Kauf auf 0,00 €?" data-en="Why does Available Balance show €0.00 after a buy?">Warum steht mein Freies Guthaben nach einem Kauf auf 0,00 €?</h3>
+        <p data-de="Nach jedem Kauf platziert der Bot direkt eine Limit-Verkaufsorder auf Kraken. Dadurch steckt Ihr Kapital im offenen Paket und wird erst nach dem Verkauf wieder unter „Freies Guthaben“ angezeigt." data-en="After every buy, the bot immediately places a limit sell order on Kraken. Your funds are held in that open package and return to 'Available Balance' once sold.">Nach jedem Kauf platziert der Bot direkt eine Limit-Verkaufsorder auf Kraken. Dadurch steckt Ihr Kapital im offenen Paket und wird erst nach dem Verkauf wieder unter „Freies Guthaben“ angezeigt.</p>
+      </div>
+      <div class="item">
+        <h3 data-de="Was passiert bei längeren Haltezeiten?" data-en="What happens during longer holding times?">Was passiert bei längeren Haltezeiten?</h3>
+        <p data-de="Hält ein Grid-Paket länger als 12 Stunden (Momentum: 2 Stunden), senkt der Bot das Verkaufsziel automatisch auf Break-Even (kostendeckend inkl. Gebühren), um Kapital schneller wieder freizumachen." data-en="If a grid package is held longer than 12 hours (Momentum: 2 hours), the bot automatically lowers the target price to break-even (covering fees) to free up capital faster.">Hält ein Grid-Paket länger als 12 Stunden (Momentum: 2 Stunden), senkt der Bot das Verkaufsziel automatisch auf Break-Even (kostendeckend inkl. Gebühren), um Kapital schneller wieder freizumachen.</p>
+      </div>
+    </section>
+
+    <footer>
+      <strong>Impressum / Legal Notice:</strong> Lars Georgi • Regina-Ullmann-Str. 69, 81927 München • E-Mail: Kryptobotpro@gmail.com
+    </footer>
+  </div>
+
+  <script>
+    let lang = 'de';
+    function toggleLang() {
+      lang = lang === 'de' ? 'en' : 'de';
+      document.querySelectorAll('[data-de]').forEach(el => {
+        el.innerHTML = el.getAttribute('data-' + lang);
+      });
+    }
+  </script>
+</body>
+</html>
